@@ -133,31 +133,36 @@
     "BarcodeComplementModes": [
       {
         "Mode": "BCM_SKIP"
-      },
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "BCM_GENERAL"
       }
     ],
     "BarcodeFormatIds": [
       "BF_ALL"
     ],
     "BarcodeFormatIds_2": [
-      "BF2_POSTALCODE",
-      "BF2_DOTCODE"
+      "BF2_NULL"
     ],
     "BinarizationModes": [
       {
-        "BlockSizeX": 0,
-        "BlockSizeY": 0,
+        "BlockSizeX": 21,
+        "BlockSizeY": 21,
         "EnableFillBinaryVacancy": 1,
         "ImagePreprocessingModesIndex": -1,
         "LibraryFileName": "",
         "LibraryParameters": "",
         "Mode": "BM_LOCAL_BLOCK",
-        "ThresholdCompensation": 10
+        "ThresholdCompensation": 9
+      },
+      {
+        "BlockSizeX": 31,
+        "BlockSizeY": 71,
+        "EnableFillBinaryVacancy": 0,
+        "ImagePreprocessingModesIndex": -1,
+        "LibraryFileName": "",
+        "LibraryParameters": "",
+        "Mode": "BM_LOCAL_BLOCK",
+        "ThresholdCompensation": 60
       }
+
     ],
     "ColourClusteringModes": [
       {
@@ -187,30 +192,10 @@
         "LibraryFileName": "",
         "LibraryParameters": "",
         "Mode": "DRM_GENERAL"
-      },
-      {
-        "BinarizationMode": {
-          "BlockSizeX": 0,
-          "BlockSizeY": 0,
-          "EnableFillBinaryVacancy": 1,
-          "Mode": "BM_LOCAL_BLOCK",
-          "MorphOperation": "Close",
-          "MorphOperationKernelSizeX": -1,
-          "MorphOperationKernelSizeY": -1,
-          "MorphShape": "Rectangle",
-          "ThresholdCompensation": 10
-        },
-        "GrayscaleEnhancementMode": {
-          "Mode": "GEM_GENERAL"
-        },
-        "Level": 5,
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "DRM_BROAD_WARP"
       }
     ],
     "Description": "",
-    "ExpectedBarcodesCount": 999,
+    "ExpectedBarcodesCount": 0,
     "FormatSpecificationNameArray": [
       "IP1_BF_DATAMATRIX",
       "defaultFormatParameterForAllBarcodeFormat"
@@ -220,11 +205,6 @@
         "LibraryFileName": "",
         "LibraryParameters": "",
         "Mode": "GTM_ORIGINAL"
-      },
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "GTM_INVERTED"
       }
     ],
     "ImagePreprocessingModes": [
@@ -242,11 +222,6 @@
     ],
     "LocalizationModes": [
       {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "LM_CONNECTED_BLOCKS"
-      },
-      {
         "IsOneDStacked": 0,
         "LibraryFileName": "",
         "LibraryParameters": "",
@@ -257,22 +232,12 @@
       {
         "LibraryFileName": "",
         "LibraryParameters": "",
+        "Mode": "LM_CONNECTED_BLOCKS"
+      },
+      {
+        "LibraryFileName": "",
+        "LibraryParameters": "",
         "Mode": "LM_STATISTICS"
-      },
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "LM_LINES"
-      },
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "LM_STATISTICS_MARKS"
-      },
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "LM_STATISTICS_POSTAL_CODE"
       }
     ],
     "MaxAlgorithmThreadCount": 1,
@@ -282,7 +247,9 @@
       "Mode": "PDFRM_AUTO"
     },
     "Pages": "",
-    "RegionDefinitionNameArray": null,
+    "RegionDefinitionNameArray": [
+      "default"
+    ],
     "RegionPredetectionModes": [
       {
         "LibraryFileName": "",
@@ -292,7 +259,7 @@
     ],
     "ResultCoordinateType": "RCT_PIXEL",
     "ReturnBarcodeZoneClarity": 0,
-    "ScaleDownThreshold": 99999,
+    "ScaleDownThreshold": 33942,
     "ScaleUpModes": [
       {
         "Mode": "SUM_AUTO"
@@ -330,7 +297,23 @@
         "Sensitivity": 5
       }
     ],
-    "Timeout": 99999
+    "Timeout": 10000
+  },
+  "RegionDefinition": {
+    "BarcodeFormatIds": [
+      "BF_ALL"
+    ],
+    "BarcodeFormatIds_2": [
+      "BF2_NULL"
+    ],
+    "Bottom": 100,
+    "ExpectedBarcodesCount": 0,
+    "FormatSpecificationNameArray": null,
+    "Left": 0,
+    "MeasuredByPercentage": 1,
+    "Name": "default",
+    "Right": 100,
+    "Top": 0
   },
   "Version": "3.0"
 }
