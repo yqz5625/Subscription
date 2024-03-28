@@ -133,6 +133,11 @@
     "BarcodeComplementModes": [
       {
         "Mode": "BCM_SKIP"
+      },
+      {
+        "LibraryFileName": "",
+        "LibraryParameters": "",
+        "Mode": "BCM_GENERAL"
       }
     ],
     "BarcodeFormatIds": [
@@ -142,6 +147,16 @@
       "BF2_NULL"
     ],
     "BinarizationModes": [
+      {
+        "BlockSizeX": 31,
+        "BlockSizeY": 71,
+        "EnableFillBinaryVacancy": 1,
+        "ImagePreprocessingModesIndex": -1,
+        "LibraryFileName": "",
+        "LibraryParameters": "",
+        "Mode": "BM_LOCAL_BLOCK",
+        "ThresholdCompensation": 50
+      },
       {
         "BlockSizeX": 21,
         "BlockSizeY": 21,
@@ -153,8 +168,8 @@
         "ThresholdCompensation": 9
       },
       {
-        "BlockSizeX": 31,
-        "BlockSizeY": 71,
+        "BlockSizeX": 25,
+        "BlockSizeY": 114,
         "EnableFillBinaryVacancy": 0,
         "ImagePreprocessingModesIndex": -1,
         "LibraryFileName": "",
@@ -195,7 +210,7 @@
       }
     ],
     "Description": "",
-    "ExpectedBarcodesCount": 0,
+    "ExpectedBarcodesCount": 1,
     "FormatSpecificationNameArray": [
       "IP1_BF_DATAMATRIX",
       "defaultFormatParameterForAllBarcodeFormat"
@@ -259,7 +274,7 @@
     ],
     "ResultCoordinateType": "RCT_PIXEL",
     "ReturnBarcodeZoneClarity": 0,
-    "ScaleDownThreshold": 33942,
+    "ScaleDownThreshold": 99999,
     "ScaleUpModes": [
       {
         "Mode": "SUM_AUTO"
@@ -297,7 +312,7 @@
         "Sensitivity": 5
       }
     ],
-    "Timeout": 10000
+    "Timeout": 99999
   },
   "RegionDefinition": {
     "BarcodeFormatIds": [
@@ -307,7 +322,7 @@
       "BF2_NULL"
     ],
     "Bottom": 100,
-    "ExpectedBarcodesCount": 0,
+    "ExpectedBarcodesCount": 1,
     "FormatSpecificationNameArray": null,
     "Left": 0,
     "MeasuredByPercentage": 1,
