@@ -149,19 +149,9 @@
     ],
     "BinarizationModes": [
       {
-        "BlockSizeX": 11,
-        "BlockSizeY": 11,
+        "BlockSizeX": 3,
+        "BlockSizeY": 108,
         "EnableFillBinaryVacancy": 1,
-        "ImagePreprocessingModesIndex": -1,
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "BM_LOCAL_BLOCK",
-        "ThresholdCompensation": 10
-      },
-      {
-        "BlockSizeX": 37,
-        "BlockSizeY": 37,
-        "EnableFillBinaryVacancy": 0,
         "ImagePreprocessingModesIndex": -1,
         "LibraryFileName": "",
         "LibraryParameters": "",
