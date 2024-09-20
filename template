@@ -1,5 +1,5 @@
 {
-  "FormatSpecificationArray": [
+  "BarcodeFormatSpecificationOptions": [
     {
       "AllModuleDeviation": 0,
       "AustralianPostEncodingTable": "C",
@@ -10,13 +10,9 @@
           "MinValue": 0
         }
       ],
-      "BarcodeBytesRegExPattern": "",
       "BarcodeComplementModes": null,
       "BarcodeFormatIds": [
         "BF_DATAMATRIX"
-      ],
-      "BarcodeFormatIds_2": [
-        "BF2_NULL"
       ],
       "BarcodeHeightRangeArray": null,
       "BarcodeTextLengthRangeArray": [
@@ -29,9 +25,10 @@
       "BarcodeWidthRangeArray": null,
       "BarcodeZoneBarCountRangeArray": null,
       "BarcodeZoneMinDistanceToImageBorders": 0,
+      "BaseBarcodeFormatSpecification": "",
       "Code128Subset": "",
-      "DeblurLevel": 9,
       "DeformationResistingModes": null,
+      "EnableAddOnCode": 0,
       "EnableDataMatrixECC000-140": 1,
       "EnableQRCodeModel1": 0,
       "FindUnevenModuleBarcode": 1,
@@ -70,13 +67,14 @@
           "MinValue": 0
         }
       ],
-      "BarcodeBytesRegExPattern": "",
       "BarcodeComplementModes": null,
       "BarcodeFormatIds": [
-        "BF_ALL"
-      ],
-      "BarcodeFormatIds_2": [
-        "BF2_ALL"
+        "BF_DEFAULT",
+        "BF_POSTALCODE",
+        "BF_PHARMACODE",
+        "BF_PATCHCODE",
+        "BF_NONSTANDARD_BARCODE",
+        "BF_DOTCODE"
       ],
       "BarcodeHeightRangeArray": null,
       "BarcodeTextLengthRangeArray": [
@@ -89,9 +87,10 @@
       "BarcodeWidthRangeArray": null,
       "BarcodeZoneBarCountRangeArray": null,
       "BarcodeZoneMinDistanceToImageBorders": 0,
+      "BaseBarcodeFormatSpecification": "",
       "Code128Subset": "",
-      "DeblurLevel": 9,
       "DeformationResistingModes": null,
+      "EnableAddOnCode": 0,
       "EnableDataMatrixECC000-140": 0,
       "EnableQRCodeModel1": 0,
       "FindUnevenModuleBarcode": 1,
@@ -121,209 +120,812 @@
       "VerifyCheckDigit": 0
     }
   ],
-  "ImageParameter": {
-    "BarcodeColourModes": [
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "LightReflection": 1,
-        "Mode": "BICM_DARK_ON_LIGHT"
-      }
-    ],
-    "BarcodeComplementModes": [
-      {
-        "Mode": "BCM_SKIP"
-      }
-    ],
-    "BarcodeFormatIds": [
-      "BF_ALL"
-    ],
-    "BarcodeFormatIds_2": [
-      "BF2_NULL"
-    ],
-    "BinarizationModes": [
-      {
-        "BlockSizeX": 21,
-        "BlockSizeY": 21,
-        "EnableFillBinaryVacancy": 1,
-        "ImagePreprocessingModesIndex": -1,
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "BM_LOCAL_BLOCK",
-        "ThresholdCompensation": 9
+  "BarcodeReaderTaskSettingOptions": [
+    {
+      "BarcodeColourModes": [
+        {
+          "LightReflection": 1,
+          "Mode": "BICM_DARK_ON_LIGHT"
+        }
+      ],
+      "BarcodeComplementModes": [
+        {
+          "Mode": "BCM_SKIP"
+        }
+      ],
+      "BarcodeFormatIds": [
+        "BF_GS1_DATABAR",
+        "BF_POSTALCODE",
+        "BF_PHARMACODE",
+        "BF_PATCHCODE",
+        "BF_CODE_32",
+        "BF_QR_CODE",
+        "BF_DATAMATRIX",
+        "BF_AZTEC",
+        "BF_MAXICODE",
+        "BF_MICRO_QR",
+        "BF_GS1_COMPOSITE",
+        "BF_TWO_DIGIT_ADD_ON",
+        "BF_FIVE_DIGIT_ADD_ON",
+        "BF_MATRIX_25",
+        "BF_NONSTANDARD_BARCODE",
+        "BF_DOTCODE"
+      ],
+      "BarcodeFormatSpecificationNameArray": [
+        "IP1_BF_DATAMATRIX",
+        "defaultFormatParameterForAllBarcodeFormat"
+      ],
+      "BaseBarcodeReaderTaskSettingName": "",
+      "DPMCodeReadingModes": [
+        {
+          "BarcodeFormat": "BF_DATAMATRIX",
+          "Mode": "DPMCRM_SKIP"
+        }
+      ],
+      "DeblurModes": null,
+      "DeformationResistingModes": [
+        {
+          "BinarizationMode": {
+            "BinarizationThreshold": -1,
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Close",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+          },
+          "GrayscaleEnhancementMode": {
+            "Mode": "GEM_AUTO",
+            "Sensitivity": -1,
+            "SharpenBlockSizeX": -1,
+            "SharpenBlockSizeY": -1,
+            "SmoothBlockSizeX": -1,
+            "SmoothBlockSizeY": -1
+          },
+          "Level": 5,
+          "Mode": "DRM_GENERAL"
+        },
+        {
+          "BinarizationMode": {
+            "BinarizationThreshold": -1,
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Close",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+          },
+          "GrayscaleEnhancementMode": {
+            "Mode": "GEM_GENERAL",
+            "Sensitivity": -1,
+            "SharpenBlockSizeX": -1,
+            "SharpenBlockSizeY": -1,
+            "SmoothBlockSizeX": -1,
+            "SmoothBlockSizeY": -1
+          },
+          "Level": 5,
+          "Mode": "DRM_BROAD_WARP"
+        },
+        {
+          "BinarizationMode": {
+            "BinarizationThreshold": -1,
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Close",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+          },
+          "GrayscaleEnhancementMode": {
+            "Mode": "GEM_GENERAL",
+            "Sensitivity": -1,
+            "SharpenBlockSizeX": -1,
+            "SharpenBlockSizeY": -1,
+            "SmoothBlockSizeX": -1,
+            "SmoothBlockSizeY": -1
+          },
+          "Level": 5,
+          "Mode": "DRM_LOCAL_REFERENCE"
+        },
+        {
+          "BinarizationMode": {
+            "BinarizationThreshold": -1,
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Close",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+          },
+          "GrayscaleEnhancementMode": {
+            "Mode": "GEM_GENERAL",
+            "Sensitivity": -1,
+            "SharpenBlockSizeX": -1,
+            "SharpenBlockSizeY": -1,
+            "SmoothBlockSizeX": -1,
+            "SmoothBlockSizeY": -1
+          },
+          "Level": 5,
+          "Mode": "DRM_DEWRINKLE"
+        }
+      ],
+      "ExpectedBarcodesCount": 1,
+      "LocalizationModes": [
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_CONNECTED_BLOCKS",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_SCAN_DIRECTLY",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 216
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_STATISTICS",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_LINES",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_STATISTICS_MARKS",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_STATISTICS_POSTAL_CODE",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        }
+      ],
+      "MaxThreadsInOneTask": 1,
+      "Name": "BR_1",
+      "ReturnBarcodeZoneClarity": 0,
+      "SectionImageParameterArray": [
+        {
+          "ContinueWhenPartialResultsGenerated": 1,
+          "ImageParameterName": "IP_1",
+          "Section": "ST_REGION_PREDETECTION"
+        },
+        {
+          "ContinueWhenPartialResultsGenerated": 1,
+          "ImageParameterName": "IP_1",
+          "Section": "ST_BARCODE_LOCALIZATION"
+        },
+        {
+          "ContinueWhenPartialResultsGenerated": 1,
+          "ImageParameterName": "IP_Decode",
+          "Section": "ST_BARCODE_DECODING"
+        }
+      ],
+      "StartSection": "ST_REGION_PREDETECTION",
+      "TerminateSetting": {
+        "Section": "ST_BARCODE_DECODING",
+        "Stage": "IRUT_DECODED_BARCODES"
       },
-      {
-        "BlockSizeX": 31,
-        "BlockSizeY": 71,
-        "EnableFillBinaryVacancy": 0,
-        "ImagePreprocessingModesIndex": -1,
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "BM_LOCAL_BLOCK",
-        "ThresholdCompensation": 60
-      },
-      {
-        "BlockSizeX": 25,
-        "BlockSizeY": 114,
-        "EnableFillBinaryVacancy": 0,
-        "ImagePreprocessingModesIndex": -1,
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "BM_LOCAL_BLOCK",
-        "ThresholdCompensation": 50
-      }
-
-    ],
-    "ColourClusteringModes": [
-      {
-        "Mode": "CCM_SKIP"
-      }
-    ],
-    "ColourConversionModes": [
-      {
-        "BlueChannelWeight": -1,
-        "GreenChannelWeight": -1,
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "CICM_GENERAL",
-        "RedChannelWeight": -1
-      }
-    ],
-    "DPMCodeReadingModes": [
-      {
-        "Mode": "DPMCRM_SKIP"
-      }
-    ],
-    "DeblurLevel": 9,
-    "DeblurModes": null,
-    "DeformationResistingModes": [
-      {
-        "Level": 5,
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "DRM_GENERAL"
-      }
-    ],
-    "Description": "",
-    "ExpectedBarcodesCount": 0,
-    "FormatSpecificationNameArray": [
-      "IP1_BF_DATAMATRIX",
-      "defaultFormatParameterForAllBarcodeFormat"
-    ],
-    "GrayscaleTransformationModes": [
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "GTM_ORIGINAL"
-      }
-    ],
-    "ImagePreprocessingModes": [
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "IPM_GENERAL"
-      }
-    ],
-    "IntermediateResultSavingMode": {
-      "Mode": "IRSM_MEMORY"
+      "TextResultOrderModes": [
+        {
+          "Mode": "TROM_CONFIDENCE"
+        },
+        {
+          "Mode": "TROM_POSITION"
+        },
+        {
+          "Mode": "TROM_FORMAT"
+        }
+      ]
     },
-    "IntermediateResultTypes": [
-      "IRT_NO_RESULT"
-    ],
-    "LocalizationModes": [
-      {
-        "IsOneDStacked": 0,
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "LM_SCAN_DIRECTLY",
-        "ScanDirection": 0,
-        "ScanStride": 0
+    {
+      "BarcodeColourModes": [
+        {
+          "LightReflection": 1,
+          "Mode": "BICM_DARK_ON_LIGHT"
+        }
+      ],
+      "BarcodeComplementModes": [
+        {
+          "Mode": "BCM_SKIP"
+        }
+      ],
+      "BarcodeFormatIds": [
+        "BF_ONED",
+        "BF_PDF417",
+        "BF_MICRO_PDF417"
+      ],
+      "BarcodeFormatSpecificationNameArray": [
+        "IP1_BF_DATAMATRIX",
+        "defaultFormatParameterForAllBarcodeFormat"
+      ],
+      "BaseBarcodeReaderTaskSettingName": "",
+      "DPMCodeReadingModes": [
+        {
+          "BarcodeFormat": "BF_DATAMATRIX",
+          "Mode": "DPMCRM_SKIP"
+        }
+      ],
+      "DeblurModes": null,
+      "DeformationResistingModes": [
+        {
+          "BinarizationMode": {
+            "BinarizationThreshold": -1,
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Close",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+          },
+          "GrayscaleEnhancementMode": {
+            "Mode": "GEM_AUTO",
+            "Sensitivity": -1,
+            "SharpenBlockSizeX": -1,
+            "SharpenBlockSizeY": -1,
+            "SmoothBlockSizeX": -1,
+            "SmoothBlockSizeY": -1
+          },
+          "Level": 5,
+          "Mode": "DRM_GENERAL"
+        },
+        {
+          "BinarizationMode": {
+            "BinarizationThreshold": -1,
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Close",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+          },
+          "GrayscaleEnhancementMode": {
+            "Mode": "GEM_GENERAL",
+            "Sensitivity": -1,
+            "SharpenBlockSizeX": -1,
+            "SharpenBlockSizeY": -1,
+            "SmoothBlockSizeX": -1,
+            "SmoothBlockSizeY": -1
+          },
+          "Level": 5,
+          "Mode": "DRM_BROAD_WARP"
+        },
+        {
+          "BinarizationMode": {
+            "BinarizationThreshold": -1,
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Close",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+          },
+          "GrayscaleEnhancementMode": {
+            "Mode": "GEM_GENERAL",
+            "Sensitivity": -1,
+            "SharpenBlockSizeX": -1,
+            "SharpenBlockSizeY": -1,
+            "SmoothBlockSizeX": -1,
+            "SmoothBlockSizeY": -1
+          },
+          "Level": 5,
+          "Mode": "DRM_LOCAL_REFERENCE"
+        },
+        {
+          "BinarizationMode": {
+            "BinarizationThreshold": -1,
+            "BlockSizeX": 0,
+            "BlockSizeY": 0,
+            "EnableFillBinaryVacancy": 1,
+            "GrayscaleEnhancementModesIndex": -1,
+            "Mode": "BM_LOCAL_BLOCK",
+            "MorphOperation": "Close",
+            "MorphOperationKernelSizeX": -1,
+            "MorphOperationKernelSizeY": -1,
+            "MorphShape": "Rectangle",
+            "ThresholdCompensation": 10
+          },
+          "GrayscaleEnhancementMode": {
+            "Mode": "GEM_GENERAL",
+            "Sensitivity": -1,
+            "SharpenBlockSizeX": -1,
+            "SharpenBlockSizeY": -1,
+            "SmoothBlockSizeX": -1,
+            "SmoothBlockSizeY": -1
+          },
+          "Level": 5,
+          "Mode": "DRM_DEWRINKLE"
+        }
+      ],
+      "ExpectedBarcodesCount": 1,
+      "LocalizationModes": [
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_CONNECTED_BLOCKS",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_SCAN_DIRECTLY",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 216
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_STATISTICS",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_LINES",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_STATISTICS_MARKS",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        },
+        {
+          "ConfidenceThreshold": 60,
+          "IsOneDStacked": 0,
+          "Mode": "LM_STATISTICS_POSTAL_CODE",
+          "ModuleSize": 0,
+          "ScanDirection": 0,
+          "ScanStride": 0
+        }
+      ],
+      "MaxThreadsInOneTask": 1,
+      "Name": "default_BR_1",
+      "ReturnBarcodeZoneClarity": 0,
+      "SectionImageParameterArray": [
+        {
+          "ContinueWhenPartialResultsGenerated": 1,
+          "ImageParameterName": "IP_1",
+          "Section": "ST_REGION_PREDETECTION"
+        },
+        {
+          "ContinueWhenPartialResultsGenerated": 1,
+          "ImageParameterName": "IP_1",
+          "Section": "ST_BARCODE_LOCALIZATION"
+        },
+        {
+          "ContinueWhenPartialResultsGenerated": 1,
+          "ImageParameterName": "IP_Decode",
+          "Section": "ST_BARCODE_DECODING"
+        }
+      ],
+      "StartSection": "ST_REGION_PREDETECTION",
+      "TerminateSetting": {
+        "Section": "ST_BARCODE_DECODING",
+        "Stage": "IRUT_DECODED_BARCODES"
       },
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "LM_CONNECTED_BLOCKS"
-      },
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "LM_STATISTICS"
-      }
-    ],
-    "MaxAlgorithmThreadCount": 1,
-    "Name": "default",
-    "PDFRasterDPI": 300,
-    "PDFReadingMode": {
-      "Mode": "PDFRM_AUTO"
-    },
-    "Pages": "",
-    "RegionDefinitionNameArray": [
-      "default"
-    ],
-    "RegionPredetectionModes": [
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "RPM_GENERAL"
-      }
-    ],
-    "ResultCoordinateType": "RCT_PIXEL",
-    "ReturnBarcodeZoneClarity": 0,
-    "ScaleDownThreshold": 33942,
-    "ScaleUpModes": [
-      {
-        "Mode": "SUM_AUTO"
-      }
-    ],
-    "TerminatePhase": "TP_BARCODE_RECOGNIZED",
-    "TextAssistedCorrectionMode": {
-      "Mode": "TACM_SKIP"
-    },
-    "TextFilterModes": [
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "MinImageDimension": 65536,
-        "Mode": "TFM_GENERAL_CONTOUR",
-        "Sensitivity": 0
-      }
-    ],
-    "TextResultOrderModes": [
-      {
-        "Mode": "TROM_CONFIDENCE"
-      },
-      {
-        "Mode": "TROM_POSITION"
-      },
-      {
-        "Mode": "TROM_FORMAT"
-      }
-    ],
-    "TextureDetectionModes": [
-      {
-        "LibraryFileName": "",
-        "LibraryParameters": "",
-        "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
-        "Sensitivity": 5
-      }
-    ],
-    "Timeout": 10000
+      "TextResultOrderModes": [
+        {
+          "Mode": "TROM_CONFIDENCE"
+        },
+        {
+          "Mode": "TROM_POSITION"
+        },
+        {
+          "Mode": "TROM_FORMAT"
+        }
+      ]
+    }
+  ],
+  "CaptureVisionTemplates": [
+    {
+      "ImageROIProcessingNameArray": [
+        "default",
+        "roi_default"
+      ],
+      "ImageSource": "",
+      "MaxParallelTasks": 4,
+      "MinImageCaptureInterval": 0,
+      "Name": "Default_1",
+      "OutputOriginalImage": 0,
+      "SemanticProcessingNameArray": null,
+      "Timeout": 99999
+    }
+  ],
+  "GlobalParameter": {
+    "MaxTotalImageDimension": 0
   },
-  "RegionDefinition": {
-    "BarcodeFormatIds": [
-      "BF_ALL"
-    ],
-    "BarcodeFormatIds_2": [
-      "BF2_NULL"
-    ],
-    "Bottom": 100,
-    "ExpectedBarcodesCount": 0,
-    "FormatSpecificationNameArray": null,
-    "Left": 0,
-    "MeasuredByPercentage": 1,
-    "Name": "default",
-    "Right": 100,
-    "Top": 0
-  },
-  "Version": "3.0"
+  "ImageParameterOptions": [
+    {
+      "BaseImageParameterName": "",
+      "BinarizationModes": [
+        {
+          "BinarizationThreshold": -1,
+          "BlockSizeX": 397,
+          "BlockSizeY": 3,
+          "EnableFillBinaryVacancy": 1,
+          "GrayscaleEnhancementModesIndex": -1,
+          "Mode": "BM_LOCAL_BLOCK",
+          "MorphOperation": "Close",
+          "MorphOperationKernelSizeX": -1,
+          "MorphOperationKernelSizeY": -1,
+          "MorphShape": "Rectangle",
+          "ThresholdCompensation": 10
+        },
+        {
+          "BinarizationThreshold": -1,
+          "BlockSizeX": 0,
+          "BlockSizeY": 0,
+          "EnableFillBinaryVacancy": 1,
+          "GrayscaleEnhancementModesIndex": -1,
+          "Mode": "BM_THRESHOLD",
+          "MorphOperation": "Close",
+          "MorphOperationKernelSizeX": -1,
+          "MorphOperationKernelSizeY": -1,
+          "MorphShape": "Rectangle",
+          "ThresholdCompensation": 10
+        },
+        {
+          "BinarizationThreshold": -1,
+          "BlockSizeX": 13,
+          "BlockSizeY": 13,
+          "EnableFillBinaryVacancy": 1,
+          "GrayscaleEnhancementModesIndex": -1,
+          "Mode": "BM_LOCAL_BLOCK",
+          "MorphOperation": "Close",
+          "MorphOperationKernelSizeX": -1,
+          "MorphOperationKernelSizeY": -1,
+          "MorphShape": "Rectangle",
+          "ThresholdCompensation": 10
+        }
+      ],
+      "ColourConversionModes": [
+        {
+          "BlueChannelWeight": -1,
+          "GreenChannelWeight": -1,
+          "Mode": "CICM_GENERAL",
+          "RedChannelWeight": -1,
+          "ReferChannel": "H_CHANNEL"
+        }
+      ],
+      "GrayscaleEnhancementModes": [
+        {
+          "Mode": "GEM_GENERAL",
+          "Sensitivity": -1,
+          "SharpenBlockSizeX": -1,
+          "SharpenBlockSizeY": -1,
+          "SmoothBlockSizeX": -1,
+          "SmoothBlockSizeY": -1
+        },
+        {
+          "Mode": "GEM_GRAY_EQUALIZE",
+          "Sensitivity": 7,
+          "SharpenBlockSizeX": -1,
+          "SharpenBlockSizeY": -1,
+          "SmoothBlockSizeX": -1,
+          "SmoothBlockSizeY": -1
+        },
+        {
+          "Mode": "GEM_GRAY_SMOOTH",
+          "Sensitivity": -1,
+          "SharpenBlockSizeX": -1,
+          "SharpenBlockSizeY": -1,
+          "SmoothBlockSizeX": 3,
+          "SmoothBlockSizeY": 3
+        },
+        {
+          "Mode": "GEM_SHARPEN_SMOOTH",
+          "Sensitivity": -1,
+          "SharpenBlockSizeX": 5,
+          "SharpenBlockSizeY": 5,
+          "SmoothBlockSizeX": 5,
+          "SmoothBlockSizeY": 5
+        }
+      ],
+      "GrayscaleTransformationModes": [
+        {
+          "Mode": "GTM_ORIGINAL"
+        },
+        {
+          "Mode": "GTM_INVERTED"
+        }
+      ],
+      "IfEraseTextZone": 1,
+      "Name": "IP_1",
+      "RegionPredetectionModes": [
+        {
+          "AspectRatioRange": "[]",
+          "FindAccurateBoundary": 0,
+          "ForeAndBackgroundColours": "[]",
+          "HeightRange": "[]",
+          "ImageParameterName": "",
+          "MeasuredByPercentage": 1,
+          "MinImageDimension": 262144,
+          "Mode": "RPM_GENERAL",
+          "RelativeRegions": "[]",
+          "Sensitivity": 1,
+          "SpatialIndexBlockSize": 5,
+          "WidthRange": "[]"
+        }
+      ],
+      "ScaleDownThreshold": 2300,
+      "ScaleUpModes": [
+        {
+          "AcuteAngleWithXThreshold": -1,
+          "LetterHeightThreshold": 0,
+          "Mode": "SUM_LINEAR_INTERPOLATION",
+          "ModuleSizeThreshold": 2,
+          "TargetLetterHeight": 0,
+          "TargetModuleSize": 8
+        }
+      ],
+      "TextDetectionMode": {
+        "CharHeightRange": [
+          1,
+          1000,
+          1
+        ],
+        "Direction": "UNKNOWN",
+        "MaxSpacingInALine": -1,
+        "Mode": "TTDM_LINE",
+        "Sensitivity": 3,
+        "StringLengthRange": null
+      },
+      "TextureDetectionModes": [
+        {
+          "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
+          "Sensitivity": 9
+        }
+      ]
+    },
+    {
+      "BaseImageParameterName": "",
+      "BinarizationModes": [
+        {
+          "BinarizationThreshold": -1,
+          "BlockSizeX": 0,
+          "BlockSizeY": 0,
+          "EnableFillBinaryVacancy": 1,
+          "GrayscaleEnhancementModesIndex": -1,
+          "Mode": "BM_LOCAL_BLOCK",
+          "MorphOperation": "Close",
+          "MorphOperationKernelSizeX": -1,
+          "MorphOperationKernelSizeY": -1,
+          "MorphShape": "Rectangle",
+          "ThresholdCompensation": 10
+        }
+      ],
+      "ColourConversionModes": [
+        {
+          "BlueChannelWeight": -1,
+          "GreenChannelWeight": -1,
+          "Mode": "CICM_GENERAL",
+          "RedChannelWeight": -1,
+          "ReferChannel": "H_CHANNEL"
+        }
+      ],
+      "GrayscaleEnhancementModes": [
+        {
+          "Mode": "GEM_GENERAL",
+          "Sensitivity": -1,
+          "SharpenBlockSizeX": -1,
+          "SharpenBlockSizeY": -1,
+          "SmoothBlockSizeX": -1,
+          "SmoothBlockSizeY": -1
+        }
+      ],
+      "GrayscaleTransformationModes": [
+        {
+          "Mode": "GTM_ORIGINAL"
+        }
+      ],
+      "IfEraseTextZone": 1,
+      "Name": "IP_Decode",
+      "RegionPredetectionModes": [
+        {
+          "AspectRatioRange": "[]",
+          "FindAccurateBoundary": 0,
+          "ForeAndBackgroundColours": "[]",
+          "HeightRange": "[]",
+          "ImageParameterName": "",
+          "MeasuredByPercentage": 1,
+          "MinImageDimension": 262144,
+          "Mode": "RPM_GENERAL",
+          "RelativeRegions": "[]",
+          "Sensitivity": 1,
+          "SpatialIndexBlockSize": 5,
+          "WidthRange": "[]"
+        }
+      ],
+      "ScaleDownThreshold": 99999,
+      "ScaleUpModes": [
+        {
+          "AcuteAngleWithXThreshold": -1,
+          "LetterHeightThreshold": 0,
+          "Mode": "SUM_AUTO",
+          "ModuleSizeThreshold": 0,
+          "TargetLetterHeight": 0,
+          "TargetModuleSize": -1
+        }
+      ],
+      "TextDetectionMode": {
+        "CharHeightRange": [
+          1,
+          1000,
+          1
+        ],
+        "Direction": "UNKNOWN",
+        "MaxSpacingInALine": -1,
+        "Mode": "TTDM_LINE",
+        "Sensitivity": 3,
+        "StringLengthRange": null
+      },
+      "TextureDetectionModes": [
+        {
+          "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
+          "Sensitivity": 5
+        }
+      ]
+    }
+  ],
+  "TargetROIDefOptions": [
+    {
+      "BaseTargetROIDefName": "",
+      "Location": {
+        "Offset": {
+          "FirstPoint": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "FourthPoint": [
+            0,
+            30,
+            1,
+            1
+          ],
+          "MeasuredByPercentage": 1,
+          "ReferenceObjectOriginIndex": 0,
+          "ReferenceObjectType": "ROT_ATOMIC_OBJECT",
+          "ReferenceXAxis": {
+            "AxisType": "AT_MIDPOINT_EDGE",
+            "EdgeIndex": 0,
+            "LengthReference": "LR_X",
+            "RotationAngle": 90
+          },
+          "ReferenceYAxis": {
+            "AxisType": "AT_MIDPOINT_EDGE",
+            "EdgeIndex": 1,
+            "LengthReference": "LR_Y",
+            "RotationAngle": 90
+          },
+          "SecondPoint": [
+            100,
+            0,
+            1,
+            1
+          ],
+          "ThirdPoint": [
+            100,
+            30,
+            1,
+            1
+          ]
+        }
+      },
+      "Name": "default",
+      "PauseFlag": 0,
+      "TaskSettingNameArray": [
+        "default_BR_1"
+      ]
+    },
+    {
+      "BaseTargetROIDefName": "",
+      "Location": {
+        "Offset": {
+          "FirstPoint": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "FourthPoint": [
+            0,
+            100,
+            1,
+            1
+          ],
+          "MeasuredByPercentage": 1,
+          "ReferenceObjectOriginIndex": 0,
+          "ReferenceObjectType": "ROT_ATOMIC_OBJECT",
+          "ReferenceXAxis": {
+            "AxisType": "AT_MIDPOINT_EDGE",
+            "EdgeIndex": 0,
+            "LengthReference": "LR_X",
+            "RotationAngle": 90
+          },
+          "ReferenceYAxis": {
+            "AxisType": "AT_MIDPOINT_EDGE",
+            "EdgeIndex": 1,
+            "LengthReference": "LR_Y",
+            "RotationAngle": 90
+          },
+          "SecondPoint": [
+            100,
+            0,
+            1,
+            1
+          ],
+          "ThirdPoint": [
+            100,
+            100,
+            1,
+            1
+          ]
+        }
+      },
+      "Name": "roi_default",
+      "PauseFlag": 0,
+      "TaskSettingNameArray": [
+        "BR_1"
+      ]
+    }
+  ]
 }
